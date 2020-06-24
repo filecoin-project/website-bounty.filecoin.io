@@ -1,12 +1,30 @@
-import React from 'react'
-import Link from 'next/link'
+import React, { useRef } from 'react';
+import Link from 'next/link';
 
-export default () => (
-  <main>
-    <h1>Hello from Preact</h1>
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Fellowship from '../components/Fellowship';
+import Bounties from '../components/Bounties';
 
-    <Link href="/about">
-      <a>About</a>
-    </Link>
-  </main>
-)
+export default () => {
+  const bountiesRef = useRef(null);
+  const fellowshipRef = useRef(null);
+  const pages = {
+    bounties: {
+      name: 'Bounties',
+      ref: bountiesRef,
+    },
+    fellowship: {
+      name: 'Fellowship',
+      ref: fellowshipRef,
+    },
+  };
+  return (
+    <main>
+      <Navbar pages={pages} />
+      <Hero />
+      <Fellowship ref={fellowshipRef} />
+      <Bounties ref={bountiesRef} />
+    </main>
+  );
+};

@@ -1,0 +1,35 @@
+@import './normalize.css';
+
+:root {
+  --primary: #2935ff;
+  --black: #2d2926;
+  --background-grey: #e5e5e5;
+  --light-grey: #d8d8d8;
+  --grey: #b2b2b2;
+  --dark-grey: #919191;
+  --white: #fcfcfc;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--black);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 18px;
+  max-width: 70ch;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
