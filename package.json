@@ -7,6 +7,9 @@
     "start": "NODE_ENV=production next start"
   },
   "dependencies": {
+    "@tailwindcss/ui": "^0.3.0",
+    "date-fns": "^2.14.0",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.4.0",
     "preact": "^10.3.4",
     "preact-render-to-string": "^5.1.4",
@@ -14,5 +17,11 @@
     "react-dom": "github:preact-compat/react-dom#1.0.0",
     "react-ssr-prepass": "npm:preact-ssr-prepass@^1.0.1"
   },
-  "license": "UNLICENSE"
+  "license": "UNLICENSE",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "autoprefixer": "^9.8.4",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.4.6"
+  }
 }

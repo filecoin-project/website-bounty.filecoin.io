@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 
 export default () => (
-  <div className="container">
-    <div className="intro">
+  <div className="intro container mx-auto max-w-5xl px-4 md:flex md:items-center">
+    <div className="text-center md:text-left md:flex md:justify-center relative pt-12 md:pt-0">
       <div className="logo-container">
         <img
           className="logo"
@@ -12,26 +12,24 @@ export default () => (
         />
       </div>
       <div className="intro-container">
-        <h1>Filecoin Bounty Program</h1>
+        <h1 className="text-2xl text-gray-700 md:text-4xl mb-6 font-bold tracking-tight">
+          Filecoin Bounty Program
+        </h1>
         <p>
           The Filecoin Bounty Program provides bounties for bugs. Help identify
-          bugs and improve the Filecoin protocol and clients. The most prolific
-          contributors can earn a prestigious Filecoin Security Research
-          Fellowship.
+          bugs and improve the Filecoin network. The most prolific contributors
+          can earn a prestigious Filecoin Security Research Fellowship.
         </p>
-        <a href="mailto:security@filecoin.io" className="cta-btn">
-          Submit a vulnerability
+        <a href="mailto:security@filecoin.io">
+          <button className="bg-brand-500 rounded px-5 py-3 text-white mt-8 text-lg transition duration-200 relative hover:bg-brand-600">
+            Submit a vulnerability
+          </button>
         </a>
       </div>
     </div>
     <style jsx>{`
       .intro {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-sizing: border-box;
-        position: relative;
-        min-height: 600px;
+        min-height: 500px;
       }
       .logo {
         height: 240px;
@@ -56,8 +54,7 @@ export default () => (
         position: relative;
         display: inline-block;
         transition: all 0.2s ease-in-out;
-        border-radius: 2px;
-        margin-top: 0.5rem;
+        border-radius: 4px;
       }
       a.cta-btn:hover {
         transform: translateY(-1px);

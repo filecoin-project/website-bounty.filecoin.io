@@ -1,4 +1,9 @@
+/* purgecss start ignore */
 @import './normalize.css';
+@import '../node_modules/tailwindcss/base.css';
+@import '../node_modules/tailwindcss/components.css';
+/* purgecss end ignore */
+@import '../node_modules/tailwindcss/utilities.css';
 
 :root {
   --primary: #2935ff;
@@ -12,24 +17,20 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  color: var(--black);
+  @apply text-gray-800;
+  @apply antialiased;
   background: var(--white);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
-  line-height: 1.6;
-  font-size: 18px;
+  @apply text-gray-800;
+  @apply text-lg;
+  @apply leading-relaxed;
+
   max-width: 70ch;
 }
 
 a {
   color: var(--primary);
   text-decoration: none;
-}
-
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
 }
