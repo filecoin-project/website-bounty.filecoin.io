@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build && next export -o build",
-    "start": "NODE_ENV=production next start"
+    "start": "NODE_ENV=production next start",
+    "gen-data": "node getters/getFellows.js && node getters/getRecentBounties.js"
   },
   "dependencies": {
     "@tailwindcss/ui": "^0.3.0",

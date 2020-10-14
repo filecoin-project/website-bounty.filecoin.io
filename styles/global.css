@@ -23,7 +23,6 @@ body {
 }
 
 p {
-  @apply text-gray-800;
   @apply text-lg;
   @apply leading-relaxed;
 

@@ -30,7 +30,7 @@ const MobileMenu = ({ pages, isActive, setIsActive }) => {
       <div onClick={() => setIsActive((a) => !a)}>
         <Hamburger />
       </div>
-      <div className="menu-drawer fixed p-4 pt-0 bg-brand-500 text-white z-20 flex flex-col text-2xl text-right">
+      <div className="menu-drawer fixed p-4 pt-0 bg-brand-600 text-white z-20 flex flex-col text-2xl text-right">
         <span
           className="block text-5xl mb-5"
           onClick={() => setIsActive((a) => !a)}
@@ -48,6 +48,12 @@ const MobileMenu = ({ pages, isActive, setIsActive }) => {
           onClick={() => handleMenuClick(pages.fellowship.ref)}
         >
           {pages.fellowship.name}
+        </span>
+        <span
+          className="block mb-5"
+          onClick={() => handleMenuClick(pages.rules.ref)}
+        >
+          {pages.rules.name}
         </span>
       </div>
       <style jsx>{`
@@ -80,11 +86,9 @@ export default ({ pages }) => {
             name={pages.fellowship.name}
             clickTo={pages.fellowship.ref}
           />
-          <span className="text-gray-500 hover:text-black cursor-pointer ml-6">
-            Rules
-          </span>
-          <a href="mailto:security@filecoin.io">
-            <button className="border border-gray-500 text-gray-500 border-block rounded-sm transition duration-200 hover:text-black hover:border-black px-3 py-2 ml-5">
+          <HeaderLink name={pages.rules.name} clickTo={pages.rules.ref} />
+          <a href="mailto:security@filecoin.org">
+            <button className="border border-gray-500 text-gray-500 border-block rounded-sm transition duration-200 hover:text-black hover:border-black px-3 py-2 ml-8">
               Submit a vulnerability
             </button>
           </a>
@@ -97,11 +101,6 @@ export default ({ pages }) => {
         }
         img {
           height: 48px;
-        }
-        @media screen and (max-width: 599.8px) {
-          .links {
-            display: none;
-          }
         }
       `}</style>
     </nav>

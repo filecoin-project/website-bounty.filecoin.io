@@ -9,6 +9,8 @@ module.exports = {
           '500': '#2935ff',
           '400': '#616aff',
           '200': '#babeff',
+          '100': '#D4D6FF',
+          '100': '#D4D6FF',
         },
         'brand-gray': {
           '500': '#666669',
@@ -20,5 +22,5 @@ module.exports = {
   },
   variants: {},
   plugins: [require('@tailwindcss/ui')],
-  purge: ['./pages/**/*.jsx', './components/**/*.jsx'],
+  purge: ['./pages/**/*.jsx', './components/**/*.jsx', './styles/**/*.css'],
 };

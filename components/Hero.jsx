@@ -20,7 +20,7 @@ export default () => (
           bugs and improve the Filecoin network. The most prolific contributors
           can earn a prestigious Filecoin Security Research Fellowship.
         </p>
-        <a href="mailto:security@filecoin.io">
+        <a href="mailto:security@filecoin.org">
           <button className="bg-brand-500 rounded px-5 py-3 text-white mt-8 text-lg transition duration-200 relative hover:bg-brand-600">
             Submit a vulnerability
           </button>
